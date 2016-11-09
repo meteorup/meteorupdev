@@ -12,68 +12,68 @@ var pkg       = require('../package.json');
 
 commander.version(pkg.version)
   .description(pkg.description)
-  .option('-v, --version', 'meteorup version')
-  .usage('deplay project-name');
+  .option('-v, --version', 'meteorupdev version')
+  .usage('push --server-only --debug');
 
 commander.on('--help', function() {
   console.log('  Basic Examples:');
+  // console.log('');
+  // console.log('  Faster install meteor:');
+  // console.log('');
+  // console.log('    $ meteorup install');
   console.log('');
-  console.log('  Faster install meteor:');
+  console.log('  setup your server:');
   console.log('');
-  console.log('    $ meteorup install');
-  console.log('');
-  console.log('  Deployment project:');
-  console.log('');
-  console.log('    $ meteorup deploy appName');
+  console.log('    $ meteorupdev setup');
   console.log('');
   console.log('  Command help:');
   console.log('');
-  console.log('    $ meteorup deploy -h');
+  console.log('    $ meteorupdev push -h');
   console.log('');
 });
 
 // 部署到meteorup
-commander.command('deploy <project-name> <private-key>')
-  .option('-m, --mobile-settings <mobile-settings.json>', 'Set mobile-settings from json file')
-  .option('-s, --server-only', 'server only')
-  .option('-e, --env <env.json>', 'Set environment variables from json file')
-  .option('-d, --debug', 'debug mode')
-  .description('Deployment this project to meteorup.cn microhost')
-  .action(function(argument , privateKey ,options) {
+// commander.command('deploy <project-name> <private-key>')
+//   .option('-m, --mobile-settings <mobile-settings.json>', 'Set mobile-settings from json file')
+//   .option('-s, --server-only', 'server only')
+//   .option('-e, --env <env.json>', 'Set environment variables from json file')
+//   .option('-d, --debug', 'debug mode')
+//   .description('Deployment this project to meteorup.cn microhost')
+//   .action(function(argument , privateKey ,options) {
 
-    var pwd = path.resolve('.');
+//     var pwd = path.resolve('.');
 
-    // console.log("argument"); //project-name
-    // console.log(argument); // project-name
-    // console.log("pwd"); //项目地址
-    // console.log(pwd); //项目地址
-    // console.log("commander");// 整个Comm
-    // console.log(commander); //整个Comm
-    // console.log("options"); //选项
-    // console.log(privateKey); //选项
-    // console.log(options); //选项
+//     // console.log("argument"); //project-name
+//     // console.log(argument); // project-name
+//     // console.log("pwd"); //项目地址
+//     // console.log(pwd); //项目地址
+//     // console.log("commander");// 整个Comm
+//     // console.log(commander); //整个Comm
+//     // console.log("options"); //选项
+//     // console.log(privateKey); //选项
+//     // console.log(options); //选项
     
-    // for( var opt in options){
-    //   console.log("============");
-    //   console.log(opt);
-    //   console.log("=");
-    //   console.log(options[opt]);
-    // }
+//     // for( var opt in options){
+//     //   console.log("============");
+//     //   console.log(opt);
+//     //   console.log("=");
+//     //   console.log(options[opt]);
+//     // }
 
-    var actionsRegistry = new controller( pwd ,options);
-    if(actionsRegistry['deploy']) {
-      actionsRegistry['deploy'](argument , privateKey);
-    }
+//     var actionsRegistry = new controller( pwd ,options);
+//     if(actionsRegistry['deploy']) {
+//       actionsRegistry['deploy'](argument , privateKey);
+//     }
 
-  }).on('--help', function() {
-    console.log('  Examples:');
-    console.log();
-    console.log('    $ meteorup deploy appName  # Deployment to http://appName.meteorup.cn ');
-    console.log();
-    console.log('    $ meteorup deploy appName --env env.json');
-    console.log();
-  }
-);
+//   }).on('--help', function() {
+//     console.log('  Examples:');
+//     console.log();
+//     console.log('    $ meteorup deploy appName  # Deployment to http://appName.meteorup.cn ');
+//     console.log();
+//     console.log('    $ meteorup deploy appName --env env.json');
+//     console.log();
+//   }
+// );
 
 // 配置服务器运行环境
 commander.command('setup')
@@ -167,25 +167,25 @@ commander.command('mongo')
   }
 );
 
-commander.command('test')
-  .description('Connection to a remote mongo database')
-  .action(function(options) {
+// commander.command('test')
+//   .description('Connection to a remote mongo database')
+//   .action(function(options) {
 
-    var pwd = path.resolve('.');
-    // console.log(options);
+//     var pwd = path.resolve('.');
+//     // console.log(options);
 
-    var actionsRegistry = new controller( pwd ,options);
-    if(actionsRegistry['test']) {
-      actionsRegistry['test']();
-    }
+//     var actionsRegistry = new controller( pwd ,options);
+//     if(actionsRegistry['test']) {
+//       actionsRegistry['test']();
+//     }
 
-  }).on('--help', function() {
-    console.log('  Examples:');
-    console.log();
-    console.log('    $ meteorup mongo');
-    console.log();
-  }
-);
+//   }).on('--help', function() {
+//     console.log('  Examples:');
+//     console.log();
+//     console.log('    $ meteorup mongo');
+//     console.log();
+//   }
+// );
 // 安装meteor
 // commander.command('install')
 //   .option('--verbose', 'verbose mode')

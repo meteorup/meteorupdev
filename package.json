@@ -3,8 +3,8 @@
     "meteorupdev": "./bin/meteorupdev"
   },
   "name": "meteorupdev",
-  "version": "1.0.18",
-  "description": "Meteorup is a meteor enhancement tools",
+  "version": "1.0.19",
+  "description": "Meteorupdev is a meteor enhancement tools",
   "main": "index.js",
   "scripts": {
     "test": "test/index.js"
@@ -19,13 +19,13 @@
     "china",
     "GFW"
   ],
-  "homepage": "https://github.com/romejiang/meteorup",
+  "homepage": "https://github.com/meteorup/meteorupdev",
   "repository": {
     "type": "git",
-    "url": "git@github.com:romejiang/meteorup.git"
+    "url": "git@github.com:meteorup/meteorupdev.git"
   },
   "bugs": {
-    "url": "https://github.com/romejiang/meteorup/issues"
+    "url": "https://github.com/meteorup/meteorupdev/issues"
   },
   "license": "MIT",
   "dependencies": {

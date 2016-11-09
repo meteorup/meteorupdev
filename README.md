@@ -1,35 +1,27 @@
   
 
-Meteorup is a meteor enhancement tools.
+Meteorupdev is a meteor enhancement tools.
 
-[中文说明文档](http://blog.meteorup.cn/2016/05/27/meteorup-guide/)
+[中文说明文档](https://github.com/meteorup/meteorupdev/blob/master/README.zh_CN.md)
 
 Starting an application in production mode is as easy as:
 
 ```bash
-$ meteorup deploy
+$ meteorupdev deploy
 ```
 
-## Install Meteorup
+## Install Meteorupdev
 
 ```bash
-$ npm install meteorup -g
+$ npm install meteorupdev -g
 ```
 
 *npm is a builtin CLI when you install Node.js - [Installing Node.js with NVM](https://keymetrics.io/2015/02/03/installing-node-js-and-io-js-with-nvm/)*
 
-## Deployment this project to meteorup.cn microhost ( like Galaxy )
-
-```bash
-$ meteorup deploy AppName
-```
-
-Visit http://AppName.meteorup.cn after a successful deployment
-
 ## Configuration runtime environments on private server
 
 ```bash
-$ meteorup setup
+$ meteorupdev setup
 ```
 
 install on your server NVM, nodejs, pm2, mongodb
@@ -37,9 +29,9 @@ install on your server NVM, nodejs, pm2, mongodb
 ## Deployment a project to private server
 
 ```bash
-$ meteorup push
+$ meteorupdev push
 or 
-$ meteorup push -s // meteor build --server-only
+$ meteorupdev push -s // meteor build --server-only
 ```
 
 Visit ROOT_URL after a successful deployment
@@ -64,7 +56,7 @@ write to package.json file.
 		"//": "Install MongoDB on the server. Does not destroy the local MongoDB on future setups",
 		"mongo": true,
 		"//": "Application server path .  must in /usr /opt /home /alidata directory.",
-		"path": "/usr/local/meteorup"
+		"path": "/usr/local/meteorupdev"
     },
     "deploy": {
 		"//": "Application name (no spaces).",
@@ -85,15 +77,15 @@ write to package.json file.
 ## Print logs on server
 
 ```bash
-$ meteorup logs
+$ meteorupdev logs
 or
-$ meteorup logs -l 100
+$ meteorupdev logs -l 100
 ```
 
 ## Connection to a remote mongo database
 
 ```bash
-$ meteorup mongo
+$ meteorupdev mongo
 ```
 
 
@@ -104,11 +96,11 @@ $ "notice": "Well done"
 ```
 
 
-## Update Meteorup
+## Update Meteorupdev
 
 ```bash
-# reinstall latest meteorup version
-$ npm install meteorup -g
+# reinstall latest meteorupdev version
+$ npm install meteorupdev -g
 ```
 
 #FAQ
@@ -124,5 +116,5 @@ either comment it out the line or delete the line
 
 ## License
 
-Meteorup is made available under the terms of the MIT License (MIT)
+Meteorupdev is made available under the terms of the MIT License (MIT)
 
