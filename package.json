@@ -3,7 +3,7 @@
     "meteorupdev": "./bin/meteorupdev"
   },
   "name": "meteorupdev",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "Meteorupdev is a meteor enhancement tools",
   "main": "index.js",
   "scripts": {

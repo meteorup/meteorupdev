@@ -2,12 +2,12 @@
 
 Meteorupdev is a meteor enhancement tools.
 
-[中文说明文档](https://github.com/meteorup/meteorupdev/blob/master/README.zh_CN.md)
+[中文使用说明](https://github.com/meteorup/meteorupdev/blob/master/README.zh_CN.md)
 
 Starting an application in production mode is as easy as:
 
 ```bash
-$ meteorupdev deploy
+$ meteorupdev push
 ```
 
 ## Install Meteorupdev
@@ -18,7 +18,7 @@ $ npm install meteorupdev -g
 
 *npm is a builtin CLI when you install Node.js - [Installing Node.js with NVM](https://keymetrics.io/2015/02/03/installing-node-js-and-io-js-with-nvm/)*
 
-## Configuration runtime environments on private server
+## Configuration runtime environments on your server
 
 ```bash
 $ meteorupdev setup
@@ -26,7 +26,7 @@ $ meteorupdev setup
 
 install on your server NVM, nodejs, pm2, mongodb
 
-## Deployment a project to private server
+## Deployment a project to your server
 
 ```bash
 $ meteorupdev push
@@ -36,8 +36,8 @@ $ meteorupdev push -s // meteor build --server-only
 
 Visit ROOT_URL after a successful deployment
 
-## Setup and Deploy to your private server for config file
-write to package.json file.
+## Setup and Deploy to your server for config file
+append in package.json file.
 ```js
 
     "server": {
@@ -91,8 +91,8 @@ $ meteorupdev mongo
 
 ## Custom completion notice voice
 config in package.json file. default would say “finished”
-```bash
-$ "notice": "Well done"
+```js
+"notice": "Well done"
 ```
 
 
